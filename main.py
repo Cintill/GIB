@@ -26,3 +26,6 @@ elif sys.argv[1] == "release":
             os.system(f"gh release create {sys.argv[3]} --title \"{sys.argv[4]}\" --notes \"{sys.argv[6]}\"")
         elif sys.argv[5] == "notes-file":
             os.system(f"gh release create {sys.argv[3]} --title \"{sys.argv[4]}\" --notes-file \"{sys.argv[6]}\"")
+
+elif sys.argv[1] == "clone":
+    os.system(f"git clone https://github.com/{sys.argv[2]}")
