@@ -11,8 +11,9 @@ if sys.argv[1] == "create":
 
 elif sys.argv[1] == "update":
     os.system("git add .")
+    os.system("git status")
     os.system(f"git commit -m \"{sys.argv[2]}\"")
-    os.system("git push --set-upstream origin master")
+    os.system("git push")
 
 elif sys.argv[1] == "remove":
     os.system("gh repo delete --yes")
